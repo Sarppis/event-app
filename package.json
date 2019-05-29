@@ -8,6 +8,8 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -22,6 +24,7 @@
       "not dead",
       "not op_mini all"
     ],
+    "homepage": "https://Riijohanna.github.io/event-app",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
