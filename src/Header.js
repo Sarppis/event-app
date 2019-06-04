@@ -1,11 +1,19 @@
 import React from 'react';
+import balloons from './img/balloons.png';
 
-const Header = () => {
-  return (
-  <div>
-      
-    </div>
-  );
+
+const Header = ({ title }) => {
+ return (
+ <div>
+   <header>
+     { title }
+   </header>
+   <div className="image">
+     <img src={ balloons } alt="dark" />
+   </div>
+ </div>
+)
+
 };
 
 export default Header;

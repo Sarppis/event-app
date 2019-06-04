@@ -1,17 +1,30 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import Content from './Content';
 import Header from './Header';
 import Buttons from './Buttons';
 
 const App = () => {
   const [index, setIndex] = useState(0)
+  const [data, setData] = useState([])
   const handleClick = () => {
     setIndex(index+1);
     console.log('clicked!');
 }
+
+useEffect(() => {
+const getEvents = () => {
+  fetch('http://localhost:3030/events/?language_filter=en&limit=100')
+.then(function(response) {
+ return response.json();
+})
+.then(function(myJson) {
+ console.log(JSON.stringify(myJson));
+});
+}}, [])
+
   return (
     <div className="App">
-    <Header />
+  <Header title='HeL EVENTS' />
     <main>
     <Buttons onClick={handleClick} icon="basketball" />
     <Buttons onClick={handleClick} icon="music" />
