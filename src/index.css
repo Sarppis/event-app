@@ -24,7 +24,7 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between;   /*  take this off and the spaces will go away */
   min-height: 100%;
 }
 
@@ -52,25 +52,68 @@ main div {
   border: 2px solid black;
 }
 
-main div.heart {
+main div.music {
   background-color: #FFDC00;
 }
-main div.heart:before {
-  content: '\f004';
+main div.music:before {
+  content: '\f001';
   font-size: 2em;
   padding: 0.5em;
 }
 
-main div.heart-broken {
+main div.basketball {
   background-color: #000;
 }
-main div.heart-broken:before {
-  content: '\f7a9';
+main div.basketball:before {
+  content: '\f434';
   font-size: 2em;
   padding: 0.5em;
 }
 
+main div.kids {
+  background-color: #FFDC00;
+}
+main div.kids:before {
+  content: '\f77c';
+  font-size: 2em;
+  padding: 0.5em;
+}
 
+main div.concert {
+  background-color: #000;
+}
+main div.concert:before {
+  content: '\f7a6';
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+main div.festival {
+  background-color: #000;
+}
+main div.festival:before {
+  content: '\f25b';
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+main div.teater {
+  background-color: #FFDC00;
+}
+main div.teater:before {
+  content: '\f630';
+  font-size: 2em;
+  padding: 0.5em;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 12.5em;
+  height: auto;
+}
 @media only screen and (min-width: 426px) {
   img {
     width: 20em;

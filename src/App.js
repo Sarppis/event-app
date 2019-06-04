@@ -13,14 +13,14 @@ const App = () => {
     <div className="App">
     <Header />
     <main>
-    <Buttons onClick={handleClick} icon="heart-broken" />
-    <Buttons onClick={handleClick} icon="heart" />
+    <Buttons onClick={handleClick} icon="basketball" />
+    <Buttons onClick={handleClick} icon="music" />
       </main>   <main>
-    <Buttons onClick={handleClick} icon="heart-broken" />
-    <Buttons onClick={handleClick} icon="heart" />
+    <Buttons onClick={handleClick} icon="kids" />
+    <Buttons onClick={handleClick} icon="concert" />
     </main>   <main>
-    <Buttons onClick={handleClick} icon="heart-broken" />
-    <Buttons onClick={handleClick} icon="heart" />
+      <Buttons onClick={handleClick} icon="festival" />
+    <Buttons onClick={handleClick} icon="teater" />
     </main>
     <Content />
     </div>
