@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Syncopate:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
 
 @font-face {
   font-family: 'FontAwesome';
@@ -28,6 +29,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
+
 }
 
 header {
@@ -38,10 +40,10 @@ header {
   justify-content: center;
   font-family: 'Syncopate', sans-serif;
   font-size: 9vw;
-  color: white;
+
 }
 
-.image img {
+.background-image img {
   width: 100%;
 }
 
@@ -49,29 +51,30 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: 'Dosis', sans-serif;
+
 }
 
 main div {
   width: 40%;
   height: 2em;
   padding: 1em;
-  margin: 0.5em;
+  margin: 0.2em;
 
   display: flex;
   justify-content: right;
   align-items: center;
 
+
   font-family: 'FontAwesome';
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
-
 }
 
 main div.music {
   background-color: white;
   color: #000;
+
 }
 main div.music:before {
   content: '\f001';
@@ -123,4 +126,26 @@ main div.teater {
 main div.teater:before {
   content: '\f630';
   font-size: 1.3em;
+}
+
+.event_info {
+  padding: 10px;
+  font-family: 'Muli', sans-serif;
+  font-size: 0.9em;
+}
+
+.name {
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.date, .address {
+  font-family: 'Muli', sans-serif;
+  font-size: 0.9em;
+}
+
+.event-image {
+  width: 100%;
+  margin: 20px 0 0 0;
 }

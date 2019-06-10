@@ -29,29 +29,28 @@ useEffect(() => {
 
 
     return (
-      <div>
+      <React.Fragment>
         { loading || !events ? ( <div> Loading.... </div>
-    ) : (
+      ) : (
       <div className="App">
-    <Header title='HeL EVENTS' />
-      <main>
-      <Buttons onClick={handleClick} icon="basketball" />
-      <Buttons onClick={handleClick} icon="music" />
-        </main>   <main>
-      <Buttons onClick={handleClick} icon="kids" />
-      <Buttons onClick={handleClick} icon="concert" />
-      </main>   <main>
-        <Buttons onClick={handleClick} icon="festival" />
-      <Buttons onClick={handleClick} icon="teater" />
-      </main>
-      <Content />
+        <Header title='HeL EVENTS' lead='What is happening here summer 2019' />
+        <main>
+          <Buttons onClick={handleClick} buttonTitle='Sport' icon="basketball" />
+          <Buttons onClick={handleClick} buttonTitle='Music' icon="music" />
+        </main>
+        <main>
+          <Buttons onClick={handleClick} buttonTitle='Kids' icon="kids" />
+          <Buttons onClick={handleClick} buttonTitle='Concert' icon="concert" />
+        </main>
+        <main>
+          <Buttons onClick={handleClick} buttonTitle='Festival' icon="festival" />
+          <Buttons onClick={handleClick} buttonTitle='Teater' icon="teater" />
+        </main>
+        <Content events={events} />
       </div>
-
       )}
-    </div>
+    </React.Fragment>
   )
-
-
 }
 
 export default App;

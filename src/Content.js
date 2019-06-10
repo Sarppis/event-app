@@ -1,17 +1,23 @@
 import React from 'react';
 
-const Content = ({ images , name , event_dates , address , description }) => {
+
+const Content = ({ events }) => {
+  console.log(events);
   return (
-    <main>
-    <div className="events">
-      <img className='card-image' src={ images } alt='event_photo' />
-      <h2 className='name'>{ name }</h2>
-      <h2 className='event_dates'>{ event_dates }</h2>
-      <p className='address'>{ address }</p>
-      <p className='description'>{ description }</p>
-    </div>
-    </main>
+    <React.Fragment>
+      { events.map(( item, index ) => {
+        return (
+          <div key = { index }>
+            <img className='event-image' src={ item.description.images.length > 0 ? item.description.images[0].url : null } alt='event' />
+            <div className='name'> { item.name.fi } </div>
+            <div className='date'> { item.event_dates.starting_day } </div>
+            <div className='address'> { item.location.address.street_address }, { item.location.address.locality} </div>
+          </div>
+        )
+      })}
+    </React.Fragment>
   );
 };
+
 
 export default Content;

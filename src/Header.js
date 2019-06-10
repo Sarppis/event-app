@@ -2,15 +2,16 @@ import React from 'react';
 import balloons from './img/balloons.png';
 
 
-const Header = ({ title }) => {
+const Header = ({ title, lead }) => {
   return (
   <div>
     <header>
       { title }
     </header>
-    <div className="image">
+    <div className="background-image">
       <img src={ balloons } alt="dark" />
     </div>
+    { lead }
   </div>
 )
 
