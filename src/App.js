@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import Content from './Content';
 import Header from './Header';
 import Buttons from './Buttons';
-
+import EventMap from './Components/EventMap';
 const App = () => {
   const [index, setIndex] = useState(0)
   const [data, setData] = useState([])
@@ -13,7 +13,7 @@ const App = () => {
 
 useEffect(() => {
 const getEvents = () => {
-  fetch('http://localhost:3030/events/?language_filter=en&limit=100')
+  fetch('http://localhost:3030/events/?language_filter=en&limit=400')
 .then(function(response) {
  return response.json();
 })
@@ -36,6 +36,7 @@ const getEvents = () => {
     <Buttons onClick={handleClick} icon="teater" />
     </main>
     <Content />
+<EventMap />
     </div>
   );
 }
