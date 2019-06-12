@@ -4,41 +4,54 @@ import Header from './Header';
 import Buttons from './Buttons';
 import EventMap from './Components/EventMap';
 const App = () => {
-  const [index, setIndex] = useState(0)
-  const [data, setData] = useState([])
+  const [index, setIndex] = useState(0);
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
   const handleClick = () => {
     setIndex(index+1);
     console.log('clicked!');
-}
+};
 
 useEffect(() => {
-const getEvents = () => {
-  fetch('http://localhost:3030/events/?language_filter=en&limit=400')
-.then(function(response) {
- return response.json();
-})
-.then(function(myJson) {
- console.log(JSON.stringify(myJson));
-});
-}}, [])
+  if (loading) {
+    fetch('http://localhost:3030/')
+    .then(res => res.json())
+    .then((myData) => {
+      setLoading(false);
+      setEvents(myData.data);
 
-  return (
-    <div className="App">
-  <Header title='HeL EVENTS' />
-    <main>
-    <Buttons onClick={handleClick} icon="basketball" />
-    <Buttons onClick={handleClick} icon="music" />
-      </main>   <main>
-    <Buttons onClick={handleClick} icon="kids" />
-    <Buttons onClick={handleClick} icon="concert" />
-    </main>   <main>
-      <Buttons onClick={handleClick} icon="festival" />
-    <Buttons onClick={handleClick} icon="teater" />
-    </main>
-    <Content />
-<EventMap />
-    </div>
-  );
+      console.log(typeof(myData.data))
+    })
+
+    .catch(console.log)
+
+  }})
+
+
+
+    return (
+      <React.Fragment>
+        { loading || !events ? ( <div> Loading.... </div>
+      ) : (
+      <div className="App">
+        <Header title='HeL EVENTS'/>
+        <div className='action'>
+        <main>
+          <Buttons onClick={handleClick} buttonTitle=<p>Sport</p> icon="basketball" />
+          <Buttons onClick={handleClick} buttonTitle=<p>Music</p> icon="music" />
+          <Buttons onClick={handleClick} buttonTitle=<p>_Kids</p> icon="kids" />
+        </main>
+        <main>
+          <Buttons onClick={handleClick} buttonTitle=<p>Concert</p>icon="concert" />
+          <Buttons onClick={handleClick} buttonTitle=<p>Festival</p> icon="festival" />
+          <Buttons onClick={handleClick} buttonTitle=<p>Teater</p> icon="teater" />
+        </main>
+        </div>
+        <Content events={events} />
+      </div>
+      )}
+    </React.Fragment>
+  )
 }
 
 export default App;
