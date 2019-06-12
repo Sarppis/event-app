@@ -39,7 +39,7 @@ useEffect(() => {
         <main>
           <Buttons onClick={handleClick} buttonTitle=<p>Sport</p> icon="basketball" />
           <Buttons onClick={handleClick} buttonTitle=<p>Music</p> icon="music" />
-          <Buttons onClick={handleClick} buttonTitle=<p>_Kids</p> icon="kids" />
+          <Buttons onClick={handleClick} buttonTitle=<p> Kids</p> icon="kids" />
         </main>
         <main>
           <Buttons onClick={handleClick} buttonTitle=<p>Concert</p>icon="concert" />
