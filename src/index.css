@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  background-color: #f9e462;;
+  background-color: #f9e462;
   min-height: 2em;
   padding: 1em 0 0 0;
   display: flex;
@@ -51,14 +51,24 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
 
+main p {
+  font-family: 'Muli', sans-serif;
+  font-size: 12px;
+}
+
+.action {
+  font-family: 'Muli', sans-serif;
+  margin-bottom: 1em;
+  padding: 0.9em;
 }
 
 main div {
-  width: 40%;
-  height: 2em;
+  width: 100px;
+  height: 1em;
   padding: 1em;
-  margin: 0.2em;
+  margin: 0.3em;
 
   display: flex;
   justify-content: right;
@@ -66,57 +76,60 @@ main div {
 
 
   font-family: 'FontAwesome';
-  color: #fff;
+  font-size: 0.75em;
+  font-weight: 600;
+  background-color: white;
+  border: solid 2px black;
   cursor: pointer;
   border-radius: 5px;
 }
 
 main div.music {
-  background-color: white;
-  color: #000;
-
+background-color:#f9e462;
+content: '\f001';
+padding-right: 0.5em;
 }
+
 main div.music:before {
   content: '\f001';
-  font-size: 1.3em;
+  padding-right: 0.5em;
 
 }
 
 main div.basketball {
-  background-color: #000;
+
 }
+
 main div.basketball:before {
   content: '\f434';
-  font-size: 1.3em;
-
+  padding-right: 0.5em;
 }
 
 main div.kids {
-  background-color: white;
-  color: #000;
+
 }
+
 main div.kids:before {
   content: '\f77c';
-  font-size: 1.3em;
-
+  padding-right: 0.5em;
 }
 
 main div.concert {
-  background-color: #000;
+  background-color:#f9e462;
 }
+
 main div.concert:before {
   content: '\f7a6';
-  font-size: 1.3em;
+  padding-right: 0.5em;
 
 }
 
 main div.festival {
-  background-color: #000;
+
 }
 main div.festival:before {
   content: '\f25b';
-  font-size: 1.3em;
-
+  padding-right: 0.5em;
 }
 
 main div.teater {
@@ -125,7 +138,7 @@ main div.teater {
 }
 main div.teater:before {
   content: '\f630';
-  font-size: 1.3em;
+  padding-right: 0.5em;
 }
 
 .event_info {
@@ -138,16 +151,20 @@ main div.teater:before {
   font-family: 'Muli', sans-serif;
   font-weight: 700;
   font-size: 0.9em;
+  margin: 0 0.875em;
 }
 
 .date, .address {
   font-family: 'Muli', sans-serif;
   font-size: 0.9em;
+  margin: 0 0.875em;
 }
 
 .event-image {
   width: 100%;
-  margin: 20px 0 0 0;
+  margin: 20px 0 10px 0;
+  border-top: solid 10px white;
+
 }
 
 main div.kids:before {

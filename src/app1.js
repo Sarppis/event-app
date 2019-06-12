@@ -1,15 +1,23 @@
 class App extends Component {
 
-  { events.map((item, index) => {
-            return (
-              <div key = { index }>
-              <div> Event Name: { item.name.fi } </div>
-              <div> Longitude: { item.location.lon } </div>
-              <div> Latitude: { item.location.lat } </div>
-              </div>
-            )
-          })}
-        </div>
 
-}
-export default App;
+
+const dateString = item.event_dates.starting_day;
+const currentTime = new Date(dateString);
+const month = currentTime.getMonth() + 1;
+const day = currentTime.getDate();
+const year = currentTime.getFullYear();
+const hour = currentTime.getHours();
+const min = currentTime.getMinutes();
+var date = day + "." + month + "." + year + " klo " + hour + "." + min;
+console.log(date);
+
+return (
+  <React.Fragment>
+  {dateString.map((item, index) => {
+      return (
+        <div key = { index }>{ item.date }</div>
+      )
+  })}
+  </React.Fragment>
+);
