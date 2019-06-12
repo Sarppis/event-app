@@ -1,12 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const Content = ({ children }) => {
-  return (
-    <main>
-        { children }
-    </main>
-=======
 
 const Content = ({ events }) => {
   console.log(events);
@@ -23,7 +16,6 @@ const Content = ({ events }) => {
         )
       })}
     </React.Fragment>
->>>>>>> origin/header
   );
 };
 
