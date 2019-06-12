@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Syncopate:700&display=swap');
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+>>>>>>> origin/header
 
 @font-face {
   font-family: 'FontAwesome';
   src: url('https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.eot');
   src: url('https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.woff') format("woff"),
+<<<<<<< HEAD
     url('https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.ttf') format("truetype"),
     url('https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.svg') format("svg");
+=======
+       url('https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.ttf') format("truetype"),
+       url('https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.svg') format("svg");
+>>>>>>> origin/header
 }
 
 html, body, #root {
@@ -16,24 +26,52 @@ html, body, #root {
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   font-family: 'Arvo', 'Palatino', 'Helvetica', sans-serif;
+=======
+>>>>>>> origin/header
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #f9e462;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/header
 .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+<<<<<<< HEAD
   /*  take this off and the spaces will go away */
   min-height: 100%;
+=======
+  min-height: 100%;
+
+}
+
+header {
+  background-color: #f9e462;;
+  min-height: 2em;
+  padding: 1em 0 0 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 9vw;
+
+}
+
+.background-image img {
+  width: 100%;
+>>>>>>> origin/header
 }
 
 main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+<<<<<<< HEAD
 }
 
 main div {
@@ -48,22 +86,52 @@ main div {
   color: #fff;
   cursor: pointer;
   border-radius: 10px;
+=======
+
+}
+
+main div {
+  width: 40%;
+  height: 2em;
+  padding: 1em;
+  margin: 0.2em;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+
+  font-family: 'FontAwesome';
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+>>>>>>> origin/header
 }
 
 main div.music {
   background-color: white;
   color: #000;
+<<<<<<< HEAD
 }
 
 main div.music:before {
   content: '\f001';
   font-size: 2em;
   padding: 0.5em;
+=======
+
+}
+main div.music:before {
+  content: '\f001';
+  font-size: 1.3em;
+
+>>>>>>> origin/header
 }
 
 main div.basketball {
   background-color: #000;
 }
+<<<<<<< HEAD
 
 main div.basketball:before {
   content: '\f434';
@@ -74,6 +142,71 @@ main div.basketball:before {
 main div.kids {
   background-color: white;
   color: #000;
+=======
+main div.basketball:before {
+  content: '\f434';
+  font-size: 1.3em;
+
+}
+
+main div.kids {
+  background-color: white;
+  color: #000;
+}
+main div.kids:before {
+  content: '\f77c';
+  font-size: 1.3em;
+
+}
+
+main div.concert {
+  background-color: #000;
+}
+main div.concert:before {
+  content: '\f7a6';
+  font-size: 1.3em;
+
+}
+
+main div.festival {
+  background-color: #000;
+}
+main div.festival:before {
+  content: '\f25b';
+  font-size: 1.3em;
+
+}
+
+main div.teater {
+  background-color: white;
+  color: #000;
+}
+main div.teater:before {
+  content: '\f630';
+  font-size: 1.3em;
+}
+
+.event_info {
+  padding: 10px;
+  font-family: 'Muli', sans-serif;
+  font-size: 0.9em;
+}
+
+.name {
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.date, .address {
+  font-family: 'Muli', sans-serif;
+  font-size: 0.9em;
+}
+
+.event-image {
+  width: 100%;
+  margin: 20px 0 0 0;
+>>>>>>> origin/header
 }
 
 main div.kids:before {
