@@ -1,5 +1,5 @@
 import React from 'react';
-import balloons from './img/balloons.png';
+import balloons1 from './img/balloons1.png';
 
 
 const Header = ({ title, lead }) => {
@@ -9,9 +9,9 @@ const Header = ({ title, lead }) => {
       { title }
     </header>
     <div className="background-image">
-      <img src={ balloons } alt="dark" />
+      <img src={ balloons1 } alt="dark" />
     </div>
-    { lead }
+
   </div>
 )
 
