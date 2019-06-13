@@ -15,7 +15,7 @@ const App = () => {
 
 useEffect(() => {
   if (loading) {
-    fetch('http://localhost:3030/')
+    fetch('http://localhost:3030/api/events/')
     .then(res => res.json())
     .then((myData) => {
       setLoading(false);
