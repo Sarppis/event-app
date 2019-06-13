@@ -150,14 +150,20 @@ main div.teater:before {
 .name {
   font-family: 'Muli', sans-serif;
   font-weight: 700;
-  font-size: 0.9em;
+  font-size: 1.2em;
+  margin: 0 0.7em;
+}
+
+.address {
+  font-family: 'Muli', sans-serif;
   margin: 0 0.875em;
 }
 
-.date, .address {
+.date {
   font-family: 'Muli', sans-serif;
-  font-size: 0.9em;
-  margin: 0 0.875em;
+  font-size: 0.8em;
+  margin: 0 1.075em;
+  line-height: 2em;
 }
 
 .event-image {
