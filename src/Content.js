@@ -1,5 +1,5 @@
 import React from 'react';
-
+import EventMap from './EventMap';
 
 
 const Content = ({ events }) => {
@@ -13,6 +13,7 @@ const Content = ({ events }) => {
             <div className='name'> { item.name.fi } </div>
             <div className='date'> { item.event_dates.starting_day } </div>
             <div className='address'> { item.location.address.street_address }, { item.location.address.locality} </div>
+            
           </div>
         )
       })}

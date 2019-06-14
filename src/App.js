@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import Content from './Content';
 import Header from './Header';
 import Buttons from './Buttons';
-import EventMap from './Components/EventMap';
+import EventMap from './EventMap';
 const App = () => {
   const [index, setIndex] = useState(0);
   const [events, setEvents] = useState([]);
