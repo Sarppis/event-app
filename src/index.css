@@ -74,7 +74,6 @@ main div {
   justify-content: right;
   align-items: center;
 
-
   font-family: 'FontAwesome';
   font-size: 0.75em;
   font-weight: 600;
@@ -84,20 +83,10 @@ main div {
   border-radius: 5px;
 }
 
-main div.music {
-background-color:#f9e462;
-content: '\f001';
-padding-right: 0.5em;
-}
 
 main div.music:before {
   content: '\f001';
   padding-right: 0.5em;
-
-}
-
-main div.basketball {
-
 }
 
 main div.basketball:before {
@@ -105,40 +94,36 @@ main div.basketball:before {
   padding-right: 0.5em;
 }
 
-main div.kids {
-
-}
-
 main div.kids:before {
   content: '\f77c';
   padding-right: 0.5em;
 }
 
-main div.concert {
-  background-color:#f9e462;
-}
-
 main div.concert:before {
   content: '\f7a6';
   padding-right: 0.5em;
-
 }
 
-main div.festival {
-
-}
 main div.festival:before {
   content: '\f25b';
   padding-right: 0.5em;
 }
 
-main div.teater {
-  background-color: white;
-  color: #000;
-}
 main div.teater:before {
   content: '\f630';
   padding-right: 0.5em;
+}
+
+main div.all:before  {
+  content: '\f581';
+  margin-top:;
+  padding-right: 0.5em;
+
+}
+
+.all {
+  justify-content: flex-start;
+  width: 160px;
 }
 
 .event_info {
@@ -168,7 +153,7 @@ main div.teater:before {
 
 .event-image {
   width: 100%;
-  margin: 20px 0 10px 0;
+  margin: 14px 0 10px 0;
   border-top: solid 10px white;
 
 }
