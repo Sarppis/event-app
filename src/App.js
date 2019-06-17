@@ -3,6 +3,7 @@ import Content from './Content';
 import Header from './Header';
 import Buttons from './Buttons';
 
+
 const App = () => {
   const [index, setIndex] = useState(0);
   const [events, setEvents] = useState([]);
@@ -25,10 +26,38 @@ useEffect(() => {
 
     .catch(console.log)
 
-  }})
-
-
-
+  const handleClickMusicals = () => {
+  fetch('http://localhost:3030/api/events/?tags_search=musicals')  .then(res => res.json())
+    .then((myData) => {
+      setLoading(false);
+      setEvents(myData.data);
+    }).catch(function(err) {
+  });
+  };
+  const handleClickFestival = () => {
+  fetch('http://localhost:3030/api/events/?tags_search=festivals')  .then(res => res.json())
+    .then((myData) => {
+      setLoading(false);
+      setEvents(myData.data);
+    }).catch(function(err) {
+  });
+  };
+  const handleClickTeatre = () => {
+  fetch('http://localhost:3030/api/events/?tags_search=theatre')  .then(res => res.json())
+    .then((myData) => {
+      setLoading(false);
+      setEvents(myData.data);
+    }).catch(function(err) {
+  });
+  };
+  const handleClickAll = () => {
+  fetch('http://localhost:3030/api/events/')  .then(res => res.json())
+    .then((myData) => {
+      setLoading(false);
+      setEvents(myData.data);
+    }).catch(function(err) {
+  });
+  };
     return (
       <React.Fragment>
         { loading || !events ? ( <div> Loading.... </div>
@@ -46,6 +75,12 @@ useEffect(() => {
           <Buttons onClick={handleClick} buttonTitle=<p>Festival</p> icon="festival" />
           <Buttons onClick={handleClick} buttonTitle=<p>Teater</p> icon="teater" />
         </main>
+        <main className='all'>
+        < Buttons onClick = { handleClickAll } buttonTitle = <p>All the events</p> icon="all"  />
+        </main>
+        </div>
+        <Content events = { events } />
+
         </div>
         <Content events={events} />
       </div>
