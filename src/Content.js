@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 
 const Content = ({ events }) => {
@@ -15,13 +15,18 @@ const Content = ({ events }) => {
         //const hour = currentTime.getHours();
         //const min = currentTime.getMinutes();
         var date = day + "." + month + "." + year;
+        const handleClick = () => {
+          console.log('clicked!');
+      };
 
         return (
           <div key = { index }>
-            <img className='event-image' src={ item.description.images.length > 0 ? item.description.images[0].url : 'img/event.png' } alt='event' />
+            <Link to="/events">
+            <img className='event-image' onClick={handleClick} src={ item.description.images.length > 0 ? item.description.images[0].url : 'img/event.png' } alt='event' /> </Link>
             <div className='date'> { date } </div>
             <div className='name'> { item.name.fi } </div>
             <div className='address'> { item.location.address.street_address }, { item.location.address.locality} </div>
+
           </div>
         )
       })}
