@@ -12,7 +12,7 @@ const Events = ( props ) => {
       <div className='address'> { props.location.state.item.location.address.street_address }, { props.location.state.item.location.address.locality} </div>
       <div className='date'> { props.location.state.date } </div>
       <div className='intro'> { props.location.state.item.description.intro } </div>
-      <div className='body'> { props.location.state.item.description.body } </div>
+      <div className='body'dangerouslySetInnerHTML={{__html:props.location.state.item.description.body}}/>  
       <EventMap lat={props.location.state.item.location.lat} lng= {props.location.state.item.location.lon}/>
     </React.Fragment>
 
