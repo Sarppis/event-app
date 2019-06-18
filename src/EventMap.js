@@ -18,7 +18,7 @@
                 zoom={12}
                 style={mapStyles}
                initialCenter={{ lat: 60.192059, lng: 24.945831}}
-               center={{lat:this.props.lat, lng:this.props.lng}} 
+               center={{lat:this.props.lat, lng:this.props.lng}}
             >
 
 
