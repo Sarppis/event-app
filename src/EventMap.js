@@ -4,7 +4,7 @@
 
        const mapStyles = {
         width: '100%',
-        height: '50%',
+        height: '100%',
        };
        class MapContainer extends Component {
 

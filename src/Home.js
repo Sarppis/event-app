@@ -95,19 +95,21 @@ fetch('http://localhost:3030/api/events/')  .then(res => res.json())
         <div className='action'>
         <main>
           <Buttons onClick={handleClickSports} buttonTitle=<p>Sports</p> icon="basketball" />
-          <Buttons onClick={handleClickMusic} buttonTitle=<p>Music</p> icon="music" />
+          <Buttons onClick={handleClickTeatre} buttonTitle=<p>Theater</p> icon="music" />
           <Buttons onClick={handleClickKids} buttonTitle=<p>Families</p> icon="kids" />
         </main>
         <main>
           <Buttons onClick={handleClickMusicals} buttonTitle=<p>Musicals</p>icon="concert" />
           <Buttons onClick={handleClickFestival} buttonTitle=<p>Festival</p> icon="festival" />
-          <Buttons onClick={handleClickTeatre} buttonTitle=<p>Theater</p> icon="teater" />
+          <Buttons onClick={handleClickMusic} buttonTitle=<p>Music</p> icon="teater" />
         </main>
         <main className='all'>
-        < Buttons onClick = { handleClickAll } buttonTitle = <p>All the events</p> icon="all"  />
+        < Buttons onClick = { handleClickAll } buttonTitle = <p>All events</p> icon="all"  />
         </main>
         </div>
-        <Content events={events} />
+        <div className='grid-container'>
+          <Content events={events} />
+        </div>
       </div>
       )}
     </React.Fragment>

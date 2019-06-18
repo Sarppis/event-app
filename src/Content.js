@@ -19,7 +19,8 @@ const Content = ({ events }) => {
       };
 
         return (
-          <div key = { index }>
+
+          <div className='grid-item' key = { index }>
             <Link to={{
               pathname:'/events',
               state: { item : item, date : date }
@@ -30,6 +31,7 @@ const Content = ({ events }) => {
             <div className='address'> { item.location.address.street_address }, { item.location.address.locality} </div>
 
           </div>
+
         )
       })}
     </React.Fragment>
