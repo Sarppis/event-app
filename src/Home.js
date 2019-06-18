@@ -76,6 +76,16 @@ useEffect(() => {
     }).catch(function(err) {
   });
   };
+
+  const handleClickAll = () => {
+fetch('http://localhost:3030/api/events/')  .then(res => res.json())
+  .then((myData) => {
+    setLoading(false);
+    setEvents(myData.data);
+  }).catch(function(err) {
+});
+};
+
     return (
       <React.Fragment>
         { loading || !events ? ( <div> Loading.... </div>
@@ -84,14 +94,17 @@ useEffect(() => {
         <Header title='HeL EVENTS'/>
         <div className='action'>
         <main>
-          <Buttons onClick={handleClickSports} buttonTitle=<p>Sport</p> icon="basketball" />
+          <Buttons onClick={handleClickSports} buttonTitle=<p>Sports</p> icon="basketball" />
           <Buttons onClick={handleClickMusic} buttonTitle=<p>Music</p> icon="music" />
-          <Buttons onClick={handleClickKids} buttonTitle=<p>Family</p> icon="kids" />
+          <Buttons onClick={handleClickKids} buttonTitle=<p>Families</p> icon="kids" />
         </main>
         <main>
           <Buttons onClick={handleClickMusicals} buttonTitle=<p>Musicals</p>icon="concert" />
           <Buttons onClick={handleClickFestival} buttonTitle=<p>Festival</p> icon="festival" />
           <Buttons onClick={handleClickTeatre} buttonTitle=<p>Theater</p> icon="teater" />
+        </main>
+        <main className='all'>
+        < Buttons onClick = { handleClickAll } buttonTitle = <p>All the events</p> icon="all"  />
         </main>
         </div>
         <Content events={events} />

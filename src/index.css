@@ -74,7 +74,6 @@ main div {
   justify-content: right;
   align-items: center;
 
-
   font-family: 'FontAwesome';
   font-size: 0.75em;
   font-weight: 600;
@@ -84,20 +83,10 @@ main div {
   border-radius: 5px;
 }
 
-main div.music {
-background-color:#f9e462;
-content: '\f001';
-padding-right: 0.5em;
-}
 
 main div.music:before {
   content: '\f001';
   padding-right: 0.5em;
-
-}
-
-main div.basketball {
-
 }
 
 main div.basketball:before {
@@ -105,40 +94,36 @@ main div.basketball:before {
   padding-right: 0.5em;
 }
 
-main div.kids {
-
-}
-
 main div.kids:before {
   content: '\f77c';
   padding-right: 0.5em;
 }
 
-main div.concert {
-  background-color:#f9e462;
-}
-
 main div.concert:before {
   content: '\f7a6';
   padding-right: 0.5em;
-
 }
 
-main div.festival {
-
-}
 main div.festival:before {
   content: '\f25b';
   padding-right: 0.5em;
 }
 
-main div.teater {
-  background-color: white;
-  color: #000;
-}
 main div.teater:before {
   content: '\f630';
   padding-right: 0.5em;
+}
+
+main div.all:before  {
+  content: '\f581';
+  margin-top:;
+  padding-right: 0.5em;
+
+}
+
+.all {
+  justify-content: flex-start;
+  width: 160px;
 }
 
 .event_info {
@@ -156,7 +141,7 @@ main div.teater:before {
 
 .address {
   font-family: 'Muli', sans-serif;
-  margin: 0 0.875em;
+  margin: 0 0.875em 1.1em;
 }
 
 .date {
@@ -168,7 +153,42 @@ main div.teater:before {
 
 .event-image {
   width: 100%;
-  margin: 20px 0 10px 0;
+  margin-bottom: 10px;
   border-top: solid 10px white;
+}
+
+h3 {
+  font-family: 'Muli', sans-serif;
+  text-decoration: none;
+  height: 1em;
+  width: 60%;
+  padding: 1em;
+  margin: 0.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.75em;
+  font-weight: 600;
+  background-color: white;
+  border: solid 2px black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.intro {
+  font-family: 'Muli', sans-serif;
+  margin: 2em 0.875em 0.6em 0.875em;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.body {
+  font-family: 'Muli', sans-serif;
+  margin: 0 0.875em 2em ;
+  font-size: 0.8em;
+  line-height: 1.4em;
 
 }
